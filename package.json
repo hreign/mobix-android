@@ -1,6 +1,6 @@
 {
   "name": "@hreign/mobix",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mobix - 运行于 Android Termux + Termux API 的手机管理 Web 应用",
   "bin": {
     "mobix": "bin/mobix.js"
