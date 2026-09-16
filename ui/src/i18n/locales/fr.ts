@@ -1,0 +1,25 @@
+export default {
+  nav: { status: 'État du téléphone', sms: 'Messages', callLog: 'Journal d\'appels' },
+  common: { refresh: 'Actualiser', confirm: 'Confirmer', cancel: 'Annuler', unknown: 'Inconnu', loading: 'Chargement...', retry: 'Réessayer', error: 'Erreur', empty: 'Aucune donnée', unnamed: 'Sans nom' },
+  status: {
+    networkTitle: 'État du réseau', simTitle: 'État de la carte SIM', batteryTitle: 'État de la batterie',
+    ssid: 'SSID', ip: 'Adresse IP', rssi: 'Force du signal', linkSpeed: 'Vitesse de connexion',
+    operator: 'Opérateur', simState: 'État SIM',
+    percentage: 'Niveau de batterie', temperature: 'Température',
+    chargeStatus: 'État de charge', powerConnection: 'Source d\'alimentation',
+  },
+  sms: {
+    title: 'Liste des messages', inbox: 'Boîte de réception', sent: 'Boîte d\'envoi', reply: 'Répondre', sendSms: 'Envoyer SMS',
+    phoneNumber: 'Numéro', content: 'Contenu', selectContact: 'Choisir un contact',
+    confirmSend: 'Confirmer l\'envoi', sendSuccess: 'SMS envoyé avec succès',
+    sendFailed: 'Échec de l\'envoi', empty: 'Aucun message',
+    contentWarning: 'Le message est long et peut être divisé en plusieurs parties',
+    numberInvalid: 'Format de numéro invalide', contentInvalid: 'Le contenu ne peut pas être vide ou dépasser 1000 caractères',
+    noNumber: 'Aucun numéro disponible pour la réponse rapide',
+    unread: 'Non lu',
+  },
+  callLog: { title: 'Journal d\'appels', empty: 'Aucun enregistrement d\'appel', loading: 'Chargement des enregistrements d\'appels...' },
+  contact: { title: 'Choisir un contact', search: 'Rechercher nom ou numéro', empty: 'Aucun contact' },
+  auth: { title: 'Mot de passe d\'accès', password: 'Entrez le mot de passe d\'accès', confirm: 'Entrer', error: 'Mot de passe incorrect, veuillez réessayer' },
+  error: { network: 'Erreur réseau, vérifiez si le service est en cours d\'exécution', unauthorized: 'Non autorisé, veuillez entrer le mot de passe d\'accès' },
+}

@@ -1,0 +1,25 @@
+export default {
+  nav: { status: 'Estado del teléfono', sms: 'Mensajes', callLog: 'Registro de llamadas' },
+  common: { refresh: 'Actualizar', confirm: 'Confirmar', cancel: 'Cancelar', unknown: 'Desconocido', loading: 'Cargando...', retry: 'Reintentar', error: 'Error', empty: 'Sin datos', unnamed: 'Sin nombre' },
+  status: {
+    networkTitle: 'Estado de la red', simTitle: 'Estado de la tarjeta SIM', batteryTitle: 'Estado de la batería',
+    ssid: 'SSID', ip: 'Dirección IP', rssi: 'Intensidad de señal', linkSpeed: 'Velocidad de conexión',
+    operator: 'Operador', simState: 'Estado SIM',
+    percentage: 'Nivel de batería', temperature: 'Temperatura',
+    chargeStatus: 'Estado de carga', powerConnection: 'Fuente de alimentación',
+  },
+  sms: {
+    title: 'Lista de mensajes', inbox: 'Bandeja de entrada', sent: 'Enviados', reply: 'Responder', sendSms: 'Enviar SMS',
+    phoneNumber: 'Número', content: 'Contenido', selectContact: 'Elegir contacto',
+    confirmSend: 'Confirmar envío', sendSuccess: 'SMS enviado con éxito',
+    sendFailed: 'Envío fallido', empty: 'Sin mensajes',
+    contentWarning: 'El mensaje es largo y puede dividirse en varias partes',
+    numberInvalid: 'Formato de número inválido', contentInvalid: 'El contenido no puede estar vacío ni exceder 1000 caracteres',
+    noNumber: 'Sin número disponible para respuesta rápida',
+    unread: 'No leído',
+  },
+  callLog: { title: 'Registro de llamadas', empty: 'Sin registros de llamadas', loading: 'Cargando registros de llamadas...' },
+  contact: { title: 'Elegir contacto', search: 'Buscar nombre o número', empty: 'Sin contactos' },
+  auth: { title: 'Contraseña de acceso', password: 'Ingrese la contraseña de acceso', confirm: 'Entrar', error: 'Contraseña incorrecta, inténtelo de nuevo' },
+  error: { network: 'Error de red, verifique si el servicio está en ejecución', unauthorized: 'No autorizado, ingrese la contraseña de acceso' },
+}

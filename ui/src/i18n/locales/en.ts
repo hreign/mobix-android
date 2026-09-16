@@ -1,0 +1,25 @@
+export default {
+  nav: { status: 'Phone Status', sms: 'Messages', callLog: 'Call Log' },
+  common: { refresh: 'Refresh', confirm: 'Confirm', cancel: 'Cancel', unknown: 'Unknown', loading: 'Loading...', retry: 'Retry', error: 'Error', empty: 'No data', unnamed: 'Unnamed' },
+  status: {
+    networkTitle: 'Network Status', simTitle: 'SIM Card Status', batteryTitle: 'Battery Status',
+    ssid: 'SSID', ip: 'IP Address', rssi: 'Signal Strength', linkSpeed: 'Link Speed',
+    operator: 'Operator', simState: 'SIM State',
+    percentage: 'Battery Level', temperature: 'Temperature',
+    chargeStatus: 'Charge Status', powerConnection: 'Power Source',
+  },
+  sms: {
+    title: 'Message List', inbox: 'Inbox', sent: 'Sent', reply: 'Reply', sendSms: 'Send SMS',
+    phoneNumber: 'Number', content: 'Content', selectContact: 'Pick Contact',
+    confirmSend: 'Confirm Send', sendSuccess: 'SMS sent successfully',
+    sendFailed: 'Send failed', empty: 'No messages',
+    contentWarning: 'Message is long and may be split into multiple parts',
+    numberInvalid: 'Invalid number format', contentInvalid: 'Content cannot be empty or exceed 1000 characters',
+    noNumber: 'No available number for quick reply',
+    unread: 'Unread',
+  },
+  callLog: { title: 'Call Log', empty: 'No call records', loading: 'Loading call records...' },
+  contact: { title: 'Pick Contact', search: 'Search name or number', empty: 'No contacts' },
+  auth: { title: 'Access Password', password: 'Enter access password', confirm: 'Enter', error: 'Wrong password, please try again' },
+  error: { network: 'Network error, please check if service is running', unauthorized: 'Unauthorized, please enter access password' },
+}

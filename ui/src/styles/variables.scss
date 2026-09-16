@@ -1,0 +1,53 @@
+// 配色
+$color-primary: #2C7A7B;
+$color-primary-hover: #23616A;
+$color-primary-pressed: #1E4F57;
+$color-background: #F7F5F0;
+$color-surface: #FFFFFF;
+$color-surface-elevated: #FCFAF5;
+$color-border: #E8E2D6;
+$color-text-primary: #2D3748;
+$color-text-secondary: #718096;
+$color-text-disabled: #A0AEC0;
+$color-success: #38A169;
+$color-warning: #D69E2E;
+$color-error: #C53030;
+$color-info: #319795;
+
+// 字体
+$font-family-base: 'PingFang SC', 'Noto Sans SC', system-ui, sans-serif;
+$font-family-mono: 'JetBrains Mono', 'SF Mono', monospace;
+$font-size-title-lg: 22px;
+$font-size-title: 18px;
+$font-size-body: 14px;
+$font-size-caption: 12px;
+$font-weight-bold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+
+// 间距
+$spacing-base: 4px;
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+// 圆角
+$radius-card: 12px;
+$radius-button: 8px;
+$radius-input: 8px;
+$radius-tag: 6px;
+$radius-pill: 999px;
+
+// 阴影
+$shadow-card-default: 0 1px 3px rgba(45, 55, 72, 0.08);
+$shadow-card-hover: 0 8px 24px rgba(45, 55, 72, 0.12);
+$shadow-modal: 0 16px 48px rgba(45, 55, 72, 0.16);
+
+// 动效
+$motion-fast: 150ms;
+$motion-normal: 250ms;
+$motion-slow: 350ms;
+$motion-ease: cubic-bezier(0.4, 0, 0.2, 1);

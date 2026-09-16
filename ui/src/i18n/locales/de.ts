@@ -1,0 +1,25 @@
+export default {
+  nav: { status: 'Telefonstatus', sms: 'Nachrichten', callLog: 'Anrufprotokoll' },
+  common: { refresh: 'Aktualisieren', confirm: 'Bestätigen', cancel: 'Abbrechen', unknown: 'Unbekannt', loading: 'Laden...', retry: 'Wiederholen', error: 'Fehler', empty: 'Keine Daten', unnamed: 'Unbenannt' },
+  status: {
+    networkTitle: 'Netzwerkstatus', simTitle: 'SIM-Kartenstatus', batteryTitle: 'Batteriestatus',
+    ssid: 'SSID', ip: 'IP-Adresse', rssi: 'Signalstärke', linkSpeed: 'Verbindungsgeschwindigkeit',
+    operator: 'Betreiber', simState: 'SIM-Status',
+    percentage: 'Batterieladung', temperature: 'Temperatur',
+    chargeStatus: 'Ladestatus', powerConnection: 'Stromquelle',
+  },
+  sms: {
+    title: 'Nachrichtenliste', inbox: 'Posteingang', sent: 'Gesendet', reply: 'Antworten', sendSms: 'SMS senden',
+    phoneNumber: 'Nummer', content: 'Inhalt', selectContact: 'Kontakt auswählen',
+    confirmSend: 'Senden bestätigen', sendSuccess: 'SMS erfolgreich gesendet',
+    sendFailed: 'Senden fehlgeschlagen', empty: 'Keine Nachrichten',
+    contentWarning: 'Nachricht ist lang und kann in mehrere Teile aufgeteilt werden',
+    numberInvalid: 'Ungültiges Nummernformat', contentInvalid: 'Inhalt darf nicht leer sein oder 1000 Zeichen überschreiten',
+    noNumber: 'Keine Nummer für schnelle Antwort verfügbar',
+    unread: 'Ungelesen',
+  },
+  callLog: { title: 'Anrufprotokoll', empty: 'Keine Anrufaufzeichnungen', loading: 'Anrufaufzeichnungen werden geladen...' },
+  contact: { title: 'Kontakt auswählen', search: 'Name oder Nummer suchen', empty: 'Keine Kontakte' },
+  auth: { title: 'Zugriffspasswort', password: 'Zugriffspasswort eingeben', confirm: 'Eintreten', error: 'Falsches Passwort, bitte erneut eingeben' },
+  error: { network: 'Netzwerkfehler, bitte prüfen ob der Dienst läuft', unauthorized: 'Nicht autorisiert, bitte Zugriffspasswort eingeben' },
+}

@@ -1,0 +1,25 @@
+export default {
+  nav: { status: '手机状态', sms: '短信管理', callLog: '通话记录' },
+  common: { refresh: '刷新', confirm: '确认', cancel: '取消', unknown: '未知', loading: '加载中...', retry: '重试', error: '发生错误', empty: '暂无数据', unnamed: '未命名' },
+  status: {
+    networkTitle: '网络状态', simTitle: 'SIM 卡状态', batteryTitle: '电池状态',
+    ssid: 'SSID', ip: 'IP 地址', rssi: '信号强度', linkSpeed: '连接速率',
+    operator: '运营商', simState: 'SIM 状态',
+    percentage: '当前电量', temperature: '电池温度',
+    chargeStatus: '充电状态', powerConnection: '电源连接',
+  },
+  sms: {
+    title: '短信列表', inbox: '收件箱', sent: '发件箱', reply: '回复', sendSms: '发送短信',
+    phoneNumber: '号码', content: '内容', selectContact: '选取联系人',
+    confirmSend: '确认发送短信', sendSuccess: '短信发送成功',
+    sendFailed: '发送失败', empty: '暂无短信',
+    contentWarning: '短信内容较长，可能被拆分为多条发送',
+    numberInvalid: '号码格式不正确', contentInvalid: '短信内容不能为空且不超过 1000 字',
+    noNumber: '该短信无可用号码，无法快速回复',
+    unread: '未读',
+  },
+  callLog: { title: '通话记录', empty: '暂无通话记录', loading: '正在获取通话记录，请稍候...' },
+  contact: { title: '选取联系人', search: '搜索姓名或号码', empty: '暂无联系人' },
+  auth: { title: '访问密码', password: '请输入访问密码', confirm: '进入', error: '密码错误，请重新输入' },
+  error: { network: '网络异常，请检查服务是否启动', unauthorized: '未授权，请输入访问密码' },
+}

@@ -1,0 +1,7 @@
+packages:
+  - ui
+  - app
+  - cli
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true

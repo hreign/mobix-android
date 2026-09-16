@@ -1,0 +1,46 @@
+# 依赖目录 / Dependencies
+node_modules/
+.pnpm-store/
+
+# 构建产物 / Build artifacts
+dist/
+public/
+bin/
+app/public/
+cli/dist/
+
+# 日志文件 / Log files
+*.log
+*.log.*
+logs/
+
+# macOS 系统文件 / macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# 编辑器 / IDE / Editor & IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# AI 工具 / AI tools
+.codeartsdoer/
+.opencode/
+.codex/
+
+# 环境配置 / Environment config
+.env
+.env.local
+.env.*.local
+
+# 打包产物 / Package artifacts
+*.tgz
+*.tar.gz
+*.zip

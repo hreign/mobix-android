@@ -1,0 +1,100 @@
+@use './variables' as *;
+
+:root {
+  // 配色
+  --color-primary: #{$color-primary};
+  --color-primary-hover: #{$color-primary-hover};
+  --color-primary-pressed: #{$color-primary-pressed};
+  --color-background: #{$color-background};
+  --color-surface: #{$color-surface};
+  --color-surface-elevated: #{$color-surface-elevated};
+  --color-border: #{$color-border};
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-text-disabled: #{$color-text-disabled};
+  --color-success: #{$color-success};
+  --color-warning: #{$color-warning};
+  --color-error: #{$color-error};
+  --color-info: #{$color-info};
+
+  // 字体
+  --font-family-base: #{$font-family-base};
+  --font-family-mono: #{$font-family-mono};
+  --font-size-title-lg: #{$font-size-title-lg};
+  --font-size-title: #{$font-size-title};
+  --font-size-body: #{$font-size-body};
+  --font-size-caption: #{$font-size-caption};
+
+  // 间距
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --spacing-xxl: #{$spacing-xxl};
+
+  // 圆角
+  --radius-card: #{$radius-card};
+  --radius-button: #{$radius-button};
+  --radius-input: #{$radius-input};
+  --radius-tag: #{$radius-tag};
+
+  // 阴影
+  --shadow-card-default: #{$shadow-card-default};
+  --shadow-card-hover: #{$shadow-card-hover};
+  --shadow-modal: #{$shadow-modal};
+
+  // 动效
+  --motion-fast: #{$motion-fast};
+  --motion-normal: #{$motion-normal};
+  --motion-slow: #{$motion-slow};
+  --motion-ease: #{$motion-ease};
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  background-image:
+    radial-gradient(at 20% 15%, rgba(44, 122, 123, 0.05) 0px, transparent 55%),
+    radial-gradient(at 85% 85%, rgba(44, 122, 123, 0.04) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(214, 158, 46, 0.02) 0px, transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 滚动条定制
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-button);
+  &:hover {
+    background: var(--color-text-disabled);
+  }
+}
+
+// 页面切换过渡
+.fade-slide-enter-active {
+  transition: opacity var(--motion-normal) var(--motion-ease), transform var(--motion-normal) var(--motion-ease);
+}
+.fade-slide-leave-active {
+  transition: opacity var(--motion-fast) var(--motion-ease), transform var(--motion-fast) var(--motion-ease);
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}

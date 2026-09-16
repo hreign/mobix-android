@@ -1,0 +1,25 @@
+export default {
+  nav: { status: '携帯電話ステータス', sms: 'メッセージ', callLog: '通話履歴' },
+  common: { refresh: '更新', confirm: '確認', cancel: 'キャンセル', unknown: '不明', loading: '読み込み中...', retry: '再試行', error: 'エラー', empty: 'データなし', unnamed: '無名' },
+  status: {
+    networkTitle: 'ネットワーク状態', simTitle: 'SIMカード状態', batteryTitle: 'バッテリー状態',
+    ssid: 'SSID', ip: 'IPアドレス', rssi: '信号強度', linkSpeed: '接続速度',
+    operator: '通信事業者', simState: 'SIM状態',
+    percentage: 'バッテリー残量', temperature: '温度',
+    chargeStatus: '充電状態', powerConnection: '電源接続',
+  },
+  sms: {
+    title: 'メッセージリスト', inbox: '受信箱', sent: '送信箱', reply: '返信', sendSms: 'SMS送信',
+    phoneNumber: '番号', content: '内容', selectContact: '連絡先選択',
+    confirmSend: '送信確認', sendSuccess: 'SMS送信成功',
+    sendFailed: '送信失敗', empty: 'メッセージなし',
+    contentWarning: 'メッセージが長く、複数に分割される可能性があります',
+    numberInvalid: '番号形式が正しくありません', contentInvalid: '内容は空にできず、1000文字以内です',
+    noNumber: 'クイック返信できる番号がありません',
+    unread: '未読',
+  },
+  callLog: { title: '通話履歴', empty: '通話記録なし', loading: '通話記録を読み込み中...' },
+  contact: { title: '連絡先選択', search: '名前または番号を検索', empty: '連絡先なし' },
+  auth: { title: 'アクセスパスワード', password: 'アクセスパスワードを入力', confirm: '入室', error: 'パスワードエラー、再入力してください' },
+  error: { network: 'ネットワークエラー、サービスが起動しているか確認してください', unauthorized: '未認証、アクセスパスワードを入力してください' },
+}

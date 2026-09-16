@@ -1,0 +1,25 @@
+export default {
+  nav: { status: '휴대폰 상태', sms: '메시지', callLog: '통화 기록' },
+  common: { refresh: '새로고침', confirm: '확인', cancel: '취소', unknown: '알 수 없음', loading: '로딩 중...', retry: '재시도', error: '오류', empty: '데이터 없음', unnamed: '이름 없음' },
+  status: {
+    networkTitle: '네트워크 상태', simTitle: 'SIM 카드 상태', batteryTitle: '배터리 상태',
+    ssid: 'SSID', ip: 'IP 주소', rssi: '신호 강도', linkSpeed: '연결 속도',
+    operator: '통신사', simState: 'SIM 상태',
+    percentage: '배터리 잔량', temperature: '온도',
+    chargeStatus: '충전 상태', powerConnection: '전원 연결',
+  },
+  sms: {
+    title: '메시지 목록', inbox: '받은편지함', sent: '보낸편지함', reply: '답장', sendSms: 'SMS 전송',
+    phoneNumber: '번호', content: '내용', selectContact: '연락처 선택',
+    confirmSend: '전송 확인', sendSuccess: 'SMS 전송 성공',
+    sendFailed: '전송 실패', empty: '메시지 없음',
+    contentWarning: '메시지가 길어 여러 개로 분할될 수 있습니다',
+    numberInvalid: '번호 형식이 올바르지 않습니다', contentInvalid: '내용은 비어 있을 수 없으며 1000자 이내입니다',
+    noNumber: '빠른 답장할 번호가 없습니다',
+    unread: '안 읽음',
+  },
+  callLog: { title: '통화 기록', empty: '통화 기록 없음', loading: '통화 기록 로딩 중...' },
+  contact: { title: '연락처 선택', search: '이름 또는 번호 검색', empty: '연락처 없음' },
+  auth: { title: '접근 비밀번호', password: '접근 비밀번호 입력', confirm: '입장', error: '비밀번호 오류, 다시 입력하세요' },
+  error: { network: '네트워크 오류, 서비스가 실행 중인지 확인하세요', unauthorized: '인증되지 않음, 접근 비밀번호를 입력하세요' },
+}

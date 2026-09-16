@@ -1,0 +1,35 @@
+{
+  "name": "@hreign/mobix",
+  "version": "0.1.0",
+  "description": "Mobix - 运行于 Android Termux + Termux API 的手机管理 Web 应用",
+  "bin": {
+    "mobix": "bin/mobix.js"
+  },
+  "files": [
+    "bin/",
+    "dist/",
+    "public/"
+  ],
+  "scripts": {
+    "dev:ui": "pnpm -C ui dev",
+    "dev:app": "pnpm -C app dev",
+    "dev": "pnpm -r --parallel run dev",
+    "build:ui": "pnpm -C ui build",
+    "build:app": "pnpm -C app build",
+    "build:cli": "pnpm -C cli build",
+    "build": "pnpm run build:ui && pnpm run build:app && pnpm run build:cli",
+    "build:publish": "node scripts/build-publish.mjs",
+    "prepublishOnly": "pnpm run build:publish",
+    "start": "pnpm -C app start",
+    "typecheck": "pnpm -C ui typecheck && pnpm -C app typecheck && pnpm -C cli typecheck"
+  },
+  "dependencies": {
+    "fastify": "^5.1.0",
+    "@fastify/static": "^8.0.0",
+    "@fastify/http-proxy": "^10.0.0",
+    "pino": "^9.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

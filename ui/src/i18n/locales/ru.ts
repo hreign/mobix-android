@@ -1,0 +1,25 @@
+export default {
+  nav: { status: 'Состояние телефона', sms: 'Сообщения', callLog: 'Журнал вызовов' },
+  common: { refresh: 'Обновить', confirm: 'Подтвердить', cancel: 'Отмена', unknown: 'Неизвестно', loading: 'Загрузка...', retry: 'Повторить', error: 'Ошибка', empty: 'Нет данных', unnamed: 'Без имени' },
+  status: {
+    networkTitle: 'Состояние сети', simTitle: 'Состояние SIM-карты', batteryTitle: 'Состояние батареи',
+    ssid: 'SSID', ip: 'IP-адрес', rssi: 'Сила сигнала', linkSpeed: 'Скорость соединения',
+    operator: 'Оператор', simState: 'Состояние SIM',
+    percentage: 'Уровень заряда', temperature: 'Температура',
+    chargeStatus: 'Состояние заряда', powerConnection: 'Источник питания',
+  },
+  sms: {
+    title: 'Список сообщений', inbox: 'Входящие', sent: 'Отправленные', reply: 'Ответить', sendSms: 'Отправить SMS',
+    phoneNumber: 'Номер', content: 'Содержание', selectContact: 'Выбрать контакт',
+    confirmSend: 'Подтвердить отправку', sendSuccess: 'SMS успешно отправлено',
+    sendFailed: 'Отправка не удалась', empty: 'Нет сообщений',
+    contentWarning: 'Сообщение длинное и может быть разбито на несколько частей',
+    numberInvalid: 'Неверный формат номера', contentInvalid: 'Содержание не может быть пустым или превышать 1000 символов',
+    noNumber: 'Нет доступного номера для быстрого ответа',
+    unread: 'Не прочитано',
+  },
+  callLog: { title: 'Журнал вызовов', empty: 'Нет записей вызовов', loading: 'Загрузка записей вызовов...' },
+  contact: { title: 'Выбрать контакт', search: 'Поиск по имени или номеру', empty: 'Нет контактов' },
+  auth: { title: 'Пароль доступа', password: 'Введите пароль доступа', confirm: 'Войти', error: 'Неверный пароль, попробуйте снова' },
+  error: { network: 'Сетевая ошибка, проверьте, запущен ли сервис', unauthorized: 'Не авторизован, введите пароль доступа' },
+}

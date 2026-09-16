@@ -1,0 +1,68 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 构建发布产物
+        run: pnpm run build:publish
+
+      - name: 发布到 npm
+        run: npm publish --ignore-scripts --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: 打包 zip 分发
+        run: |
+          mkdir -p mobix-app/app/dist
+          mkdir -p mobix-app/app/public
+          cp -r app/dist/* mobix-app/app/dist/
+          cp -r app/public/* mobix-app/app/public/
+          cp package.json mobix-app/package.json
+          cd mobix-app
+          npm install --omit=dev
+          cd ..
+          zip -r mobix-app.zip mobix-app
+
+      - name: 获取标签注释
+        id: tag_message
+        run: |
+          git fetch --unshallow 2>/dev/null || true
+          {
+            echo "message<<EOF"
+            git tag -l --format='%(contents)' "${{ github.ref_name }}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: 创建 GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: mobix-app.zip
+          body: ${{ steps.tag_message.outputs.message }}
+          draft: false
+          prerelease: false
