@@ -11,35 +11,35 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: 检出代码
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: 安装 pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9
 
-      - name: 安装 Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
           cache: pnpm
 
-      - name: 安装依赖
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: 构建发布产物
+      - name: Build release artifacts
         run: pnpm run build:publish
 
-      - name: 发布到 npm
+      - name: Publish to npm
         run: npm publish --ignore-scripts --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: 打包 zip 分发
+      - name: Package zip distribution
         run: |
           mkdir -p mobix-app/app/dist
           mkdir -p mobix-app/app/public
@@ -51,20 +51,35 @@ jobs:
           cd ..
           zip -r mobix-app.zip mobix-app
 
-      - name: 获取标签注释
-        id: tag_message
+      - name: Get release description
+        env:
+          TAG_NAME: ${{ github.ref_name }}
         run: |
-          git fetch --unshallow 2>/dev/null || true
-          {
-            echo "message<<EOF"
-            git tag -l --format='%(contents)' "${{ github.ref_name }}"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
+          git fetch --tags --force
 
-      - name: 创建 GitHub Release
+          echo "Tag: $TAG_NAME"
+          echo "Tag type: $(git cat-file -t "refs/tags/$TAG_NAME")"
+
+          TAG_TYPE=$(git cat-file -t "refs/tags/$TAG_NAME")
+
+          if [ "$TAG_TYPE" = "tag" ]; then
+            git for-each-ref \
+              "refs/tags/$TAG_NAME" \
+              --format='%(contents)' \
+              > release-body.md
+          else
+            git log -1 --pretty=%B "$TAG_NAME" > release-body.md
+          fi
+
+          echo "Release body:"
+          cat release-body.md
+
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ github.ref_name }}
           files: mobix-app.zip
-          body: ${{ steps.tag_message.outputs.message }}
+          body_path: release-body.md
+          generate_release_notes: false
           draft: false
           prerelease: false
