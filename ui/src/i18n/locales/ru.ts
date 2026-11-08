@@ -1,6 +1,6 @@
 export default {
   nav: { status: 'Состояние телефона', sms: 'Сообщения', callLog: 'Журнал вызовов' },
-  common: { refresh: 'Обновить', confirm: 'Подтвердить', cancel: 'Отмена', unknown: 'Неизвестно', loading: 'Загрузка...', retry: 'Повторить', error: 'Ошибка', empty: 'Нет данных', unnamed: 'Без имени' },
+  common: { refresh: 'Обновить', confirm: 'Подтвердить', cancel: 'Отмена', unknown: 'Неизвестно', loading: 'Загрузка...', retry: 'Повторить', error: 'Ошибка', empty: 'Нет данных', unnamed: 'Без имени', close: 'Закрыть', previous: 'Назад', next: 'Вперёд', expand: 'Развернуть', collapse: 'Свернуть' },
   status: {
     networkTitle: 'Состояние сети', simTitle: 'Состояние SIM-карты', batteryTitle: 'Состояние батареи',
     ssid: 'SSID', ip: 'IP-адрес', rssi: 'Сила сигнала', linkSpeed: 'Скорость соединения',

@@ -2,27 +2,36 @@ export interface ColorTokens {
   primary: string
   primaryHover: string
   primaryPressed: string
+  primarySoft: string
   background: string
   surface: string
   surfaceElevated: string
   border: string
+  borderStrong: string
   textPrimary: string
   textSecondary: string
   textDisabled: string
   success: string
+  successSoft: string
   warning: string
+  warningSoft: string
   error: string
+  errorSoft: string
   info: string
+  infoSoft: string
+  overlay: string
 }
 
 export interface FontTokens {
   fontFamilyBase: string
   fontFamilyMono: string
+  fontSizeDisplay: string
   fontSizeTitleLg: string
   fontSizeTitle: string
   fontSizeBody: string
   fontSizeCaption: string
   fontWeightBold: number
+  fontWeightSemibold: number
   fontWeightMedium: number
   fontWeightRegular: number
 }
@@ -59,30 +68,39 @@ export interface MotionTokens {
 }
 
 export const colorTokens: ColorTokens = {
-  primary: '#2C7A7B',
-  primaryHover: '#23616A',
-  primaryPressed: '#1E4F57',
-  background: '#F7F5F0',
+  primary: '#0F766E',
+  primaryHover: '#0D9488',
+  primaryPressed: '#115E59',
+  primarySoft: '#F0FDFA',
+  background: '#F4F6F8',
   surface: '#FFFFFF',
-  surfaceElevated: '#FCFAF5',
-  border: '#E8E2D6',
-  textPrimary: '#2D3748',
-  textSecondary: '#718096',
-  textDisabled: '#A0AEC0',
-  success: '#38A169',
-  warning: '#D69E2E',
-  error: '#C53030',
-  info: '#319795',
+  surfaceElevated: '#F8FAFC',
+  border: '#E2E8F0',
+  borderStrong: '#CBD5E1',
+  textPrimary: '#0F172A',
+  textSecondary: '#64748B',
+  textDisabled: '#94A3B8',
+  success: '#059669',
+  successSoft: '#ECFDF5',
+  warning: '#D97706',
+  warningSoft: '#FFFBEB',
+  error: '#DC2626',
+  errorSoft: '#FEF2F2',
+  info: '#0EA5E9',
+  infoSoft: '#F0F9FF',
+  overlay: 'rgba(15, 23, 42, 0.45)',
 }
 
 export const fontTokens: FontTokens = {
-  fontFamilyBase: "'PingFang SC', 'Noto Sans SC', system-ui, sans-serif",
-  fontFamilyMono: "'JetBrains Mono', 'SF Mono', monospace",
-  fontSizeTitleLg: '22px',
-  fontSizeTitle: '18px',
+  fontFamilyBase: "'Inter', 'PingFang SC', 'Noto Sans SC', system-ui, -apple-system, sans-serif",
+  fontFamilyMono: "'JetBrains Mono', 'SF Mono', ui-monospace, monospace",
+  fontSizeDisplay: '40px',
+  fontSizeTitleLg: '26px',
+  fontSizeTitle: '20px',
   fontSizeBody: '14px',
   fontSizeCaption: '12px',
-  fontWeightBold: 600,
+  fontWeightBold: 700,
+  fontWeightSemibold: 600,
   fontWeightMedium: 500,
   fontWeightRegular: 400,
 }
@@ -98,17 +116,17 @@ export const spacingTokens: SpacingTokens = {
 }
 
 export const radiusTokens: RadiusTokens = {
-  card: 12,
-  button: 8,
-  input: 8,
-  tag: 6,
+  card: 18,
+  button: 10,
+  input: 10,
+  tag: 999,
   pill: 999,
 }
 
 export const shadowTokens: ShadowTokens = {
-  cardDefault: '0 1px 3px rgba(45,55,72,0.08)',
-  cardHover: '0 8px 24px rgba(45,55,72,0.12)',
-  modal: '0 16px 48px rgba(45,55,72,0.16)',
+  cardDefault: '0 1px 2px rgba(15,23,42,0.04), 0 12px 32px -24px rgba(15,23,42,0.24)',
+  cardHover: '0 1px 2px rgba(15,23,42,0.04), 0 12px 32px -24px rgba(15,23,42,0.24)',
+  modal: '0 24px 64px -16px rgba(15,23,42,0.38)',
 }
 
 export const motionTokens: MotionTokens = {

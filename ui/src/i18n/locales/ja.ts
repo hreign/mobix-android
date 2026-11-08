@@ -1,6 +1,6 @@
 export default {
   nav: { status: '携帯電話ステータス', sms: 'メッセージ', callLog: '通話履歴' },
-  common: { refresh: '更新', confirm: '確認', cancel: 'キャンセル', unknown: '不明', loading: '読み込み中...', retry: '再試行', error: 'エラー', empty: 'データなし', unnamed: '無名' },
+  common: { refresh: '更新', confirm: '確認', cancel: 'キャンセル', unknown: '不明', loading: '読み込み中...', retry: '再試行', error: 'エラー', empty: 'データなし', unnamed: '無名', close: '閉じる', previous: '前へ', next: '次へ', expand: '展開', collapse: '折りたたむ' },
   status: {
     networkTitle: 'ネットワーク状態', simTitle: 'SIMカード状態', batteryTitle: 'バッテリー状態',
     ssid: 'SSID', ip: 'IPアドレス', rssi: '信号強度', linkSpeed: '接続速度',

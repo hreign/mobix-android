@@ -9,7 +9,7 @@ export function buildThemeOverrides(): GlobalThemeOverrides {
       primaryColorPressed: colorTokens.primaryPressed,
       borderRadius: `${radiusTokens.input}px`,
       fontFamily: fontTokens.fontFamilyBase,
-      fontWeightStrong: String(fontTokens.fontWeightBold),
+      fontWeightStrong: String(fontTokens.fontWeightSemibold),
     },
     Card: {
       borderRadius: `${radiusTokens.card}px`,
@@ -35,8 +35,8 @@ export function buildThemeOverrides(): GlobalThemeOverrides {
     },
     Menu: {
       borderRadius: `${radiusTokens.button}px`,
-      itemColorActive: colorTokens.surfaceElevated,
-      itemColorActiveHover: colorTokens.surfaceElevated,
+      itemColorActive: colorTokens.primarySoft,
+      itemColorActiveHover: colorTokens.primarySoft,
     },
     Layout: {
       color: colorTokens.background,
@@ -58,6 +58,10 @@ export function buildThemeOverrides(): GlobalThemeOverrides {
     },
     Spin: {
       color: colorTokens.primary,
+    },
+    Message: {
+      borderRadius: `${radiusTokens.button}px`,
+      boxShadow: shadowTokens.modal,
     },
   }
 }

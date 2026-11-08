@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import AppIcon from './AppIcon.vue'
 
 const { t } = useI18n()
 defineProps<{ message?: string; retryable?: boolean }>()
@@ -7,14 +8,14 @@ const emit = defineEmits<{ retry: [] }>()
 </script>
 
 <template>
-  <div class="error-banner">
-    <svg class="error-icon" viewBox="0 0 24 24" width="18" height="18">
-      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
-      <path d="M12 7v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      <circle cx="12" cy="16.5" r="1.2" fill="currentColor" />
-    </svg>
+  <div class="error-banner" role="alert">
+    <span class="error-icon">
+      <AppIcon name="alert" :size="18" />
+    </span>
     <span class="error-text">{{ message ?? t('common.error') }}</span>
-    <button v-if="retryable" class="error-retry" @click="emit('retry')">{{ t('common.retry') }}</button>
+    <button v-if="retryable" type="button" class="error-retry" @click="emit('retry')">
+      {{ t('common.retry') }}
+    </button>
   </div>
 </template>
 
@@ -25,35 +26,37 @@ const emit = defineEmits<{ retry: [] }>()
   display: flex;
   align-items: center;
   gap: $spacing-sm;
-  padding: $spacing-sm $spacing-md;
+  padding: 10px 12px;
   margin-bottom: $spacing-md;
-  border-radius: $radius-card;
-  background: $color-surface-elevated;
-  border: 1px solid $color-border;
+  border-radius: $radius-input;
+  background: $color-error-soft;
 }
 
 .error-icon {
+  display: inline-flex;
   color: $color-error;
   flex-shrink: 0;
 }
 
 .error-text {
-  color: $color-text-secondary;
-  font-size: $font-size-body;
   flex: 1;
+  color: $color-text-secondary;
+  font-size: $font-size-caption;
+  line-height: 1.5;
 }
 
 .error-retry {
+  flex-shrink: 0;
   border: none;
   background: transparent;
-  color: $color-primary;
-  cursor: pointer;
+  color: $color-error;
   font-size: $font-size-caption;
-  padding: $spacing-xs $spacing-sm;
-  border-radius: $radius-button;
+  font-weight: $font-weight-medium;
+  padding: 4px 8px;
+  border-radius: 8px;
 
   &:hover {
-    background: $color-surface-elevated;
+    background: rgba(220, 38, 38, 0.08);
   }
 }
 </style>

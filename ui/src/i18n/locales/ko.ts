@@ -1,6 +1,6 @@
 export default {
   nav: { status: '휴대폰 상태', sms: '메시지', callLog: '통화 기록' },
-  common: { refresh: '새로고침', confirm: '확인', cancel: '취소', unknown: '알 수 없음', loading: '로딩 중...', retry: '재시도', error: '오류', empty: '데이터 없음', unnamed: '이름 없음' },
+  common: { refresh: '새로고침', confirm: '확인', cancel: '취소', unknown: '알 수 없음', loading: '로딩 중...', retry: '재시도', error: '오류', empty: '데이터 없음', unnamed: '이름 없음', close: '닫기', previous: '이전', next: '다음', expand: '펼치기', collapse: '접기' },
   status: {
     networkTitle: '네트워크 상태', simTitle: 'SIM 카드 상태', batteryTitle: '배터리 상태',
     ssid: 'SSID', ip: 'IP 주소', rssi: '신호 강도', linkSpeed: '연결 속도',

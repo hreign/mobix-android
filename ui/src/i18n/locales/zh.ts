@@ -1,6 +1,6 @@
 export default {
   nav: { status: '手机状态', sms: '短信管理', callLog: '通话记录' },
-  common: { refresh: '刷新', confirm: '确认', cancel: '取消', unknown: '未知', loading: '加载中...', retry: '重试', error: '发生错误', empty: '暂无数据', unnamed: '未命名' },
+  common: { refresh: '刷新', confirm: '确认', cancel: '取消', unknown: '未知', loading: '加载中...', retry: '重试', error: '发生错误', empty: '暂无数据', unnamed: '未命名', close: '关闭', previous: '上一页', next: '下一页', expand: '展开', collapse: '收起' },
   status: {
     networkTitle: '网络状态', simTitle: 'SIM 卡状态', batteryTitle: '电池状态',
     ssid: 'SSID', ip: 'IP 地址', rssi: '信号强度', linkSpeed: '连接速率',

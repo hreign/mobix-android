@@ -7,6 +7,34 @@ export interface ApiResponse<T = any> {
 
 export type LangCode = 'zh' | 'en' | 'ja' | 'ko' | 'fr' | 'de' | 'es' | 'ru'
 
+export type IconName =
+  | 'status'
+  | 'sms'
+  | 'call'
+  | 'refresh'
+  | 'send'
+  | 'reply'
+  | 'search'
+  | 'close'
+  | 'check'
+  | 'alert'
+  | 'chevron-left'
+  | 'chevron-right'
+  | 'chevron-down'
+  | 'chevron-up'
+  | 'wifi'
+  | 'battery'
+  | 'sim'
+  | 'inbox'
+  | 'contact'
+  | 'clock'
+  | 'phone-in'
+  | 'phone-out'
+  | 'phone-missed'
+  | 'lock'
+  | 'eye'
+  | 'eye-off'
+
 export interface NetworkStatus {
   ssid: string
   ip: string

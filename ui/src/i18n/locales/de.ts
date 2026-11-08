@@ -1,6 +1,6 @@
 export default {
   nav: { status: 'Telefonstatus', sms: 'Nachrichten', callLog: 'Anrufprotokoll' },
-  common: { refresh: 'Aktualisieren', confirm: 'Bestätigen', cancel: 'Abbrechen', unknown: 'Unbekannt', loading: 'Laden...', retry: 'Wiederholen', error: 'Fehler', empty: 'Keine Daten', unnamed: 'Unbenannt' },
+  common: { refresh: 'Aktualisieren', confirm: 'Bestätigen', cancel: 'Abbrechen', unknown: 'Unbekannt', loading: 'Laden...', retry: 'Wiederholen', error: 'Fehler', empty: 'Keine Daten', unnamed: 'Unbenannt', close: 'Schließen', previous: 'Zurück', next: 'Weiter', expand: 'Erweitern', collapse: 'Einklappen' },
   status: {
     networkTitle: 'Netzwerkstatus', simTitle: 'SIM-Kartenstatus', batteryTitle: 'Batteriestatus',
     ssid: 'SSID', ip: 'IP-Adresse', rssi: 'Signalstärke', linkSpeed: 'Verbindungsgeschwindigkeit',

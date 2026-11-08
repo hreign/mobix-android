@@ -1,27 +1,36 @@
 // 配色
-$color-primary: #2C7A7B;
-$color-primary-hover: #23616A;
-$color-primary-pressed: #1E4F57;
-$color-background: #F7F5F0;
+$color-primary: #0F766E;
+$color-primary-hover: #0D9488;
+$color-primary-pressed: #115E59;
+$color-primary-soft: #F0FDFA;
+$color-background: #F4F6F8;
 $color-surface: #FFFFFF;
-$color-surface-elevated: #FCFAF5;
-$color-border: #E8E2D6;
-$color-text-primary: #2D3748;
-$color-text-secondary: #718096;
-$color-text-disabled: #A0AEC0;
-$color-success: #38A169;
-$color-warning: #D69E2E;
-$color-error: #C53030;
-$color-info: #319795;
+$color-surface-elevated: #F8FAFC;
+$color-border: #E2E8F0;
+$color-border-strong: #CBD5E1;
+$color-text-primary: #0F172A;
+$color-text-secondary: #64748B;
+$color-text-disabled: #94A3B8;
+$color-success: #059669;
+$color-success-soft: #ECFDF5;
+$color-warning: #D97706;
+$color-warning-soft: #FFFBEB;
+$color-error: #DC2626;
+$color-error-soft: #FEF2F2;
+$color-info: #0EA5E9;
+$color-info-soft: #F0F9FF;
+$color-overlay: rgba(15, 23, 42, 0.45);
 
 // 字体
-$font-family-base: 'PingFang SC', 'Noto Sans SC', system-ui, sans-serif;
-$font-family-mono: 'JetBrains Mono', 'SF Mono', monospace;
-$font-size-title-lg: 22px;
-$font-size-title: 18px;
+$font-family-base: 'Inter', 'PingFang SC', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+$font-family-mono: 'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
+$font-size-display: 40px;
+$font-size-title-lg: 26px;
+$font-size-title: 20px;
 $font-size-body: 14px;
 $font-size-caption: 12px;
-$font-weight-bold: 600;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
 $font-weight-medium: 500;
 $font-weight-regular: 400;
 
@@ -35,16 +44,16 @@ $spacing-xl: 32px;
 $spacing-xxl: 48px;
 
 // 圆角
-$radius-card: 12px;
-$radius-button: 8px;
-$radius-input: 8px;
-$radius-tag: 6px;
+$radius-card: 18px;
+$radius-button: 10px;
+$radius-input: 10px;
+$radius-tag: 999px;
 $radius-pill: 999px;
 
 // 阴影
-$shadow-card-default: 0 1px 3px rgba(45, 55, 72, 0.08);
-$shadow-card-hover: 0 8px 24px rgba(45, 55, 72, 0.12);
-$shadow-modal: 0 16px 48px rgba(45, 55, 72, 0.16);
+$shadow-card-default: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px -24px rgba(15, 23, 42, 0.24);
+$shadow-card-hover: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px -24px rgba(15, 23, 42, 0.24);
+$shadow-modal: 0 24px 64px -16px rgba(15, 23, 42, 0.38);
 
 // 动效
 $motion-fast: 150ms;
